@@ -30,6 +30,13 @@ dependencies {
 
     // Test logging
     testImplementation 'org.slf4j:slf4j-simple:2.0.9'
+
+    // JSON & YAML Utilities
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+    implementation 'org.snakeyaml:snakeyaml-engine:2.7'
+
+    // Sun Calculation Utilities
+    implementation 'org.shredzone.commons:commons-suncalc:3.7'
 }
 
 application {
