@@ -37,6 +37,9 @@ dependencies {
 
     // Sun Calculation Utilities
     implementation 'org.shredzone.commons:commons-suncalc:3.7'
+
+    // Other useful stuff
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
 application {
