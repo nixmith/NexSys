@@ -19,14 +19,14 @@ public final class LoopGuard {
      * Mark current thread as event-loop thread.
      */
     public static void markAsEventLoopThread() {
-        EVENT_LOOP_THREADS.add(Thread.currentThread().getId());
+        EVENT_LOOP_THREADS.add(Thread.currentThread().threadId());
     }
 
     /**
      * Unmark thread as event-loop thread.
      */
     public static void unmarkEventLoopThread() {
-        EVENT_LOOP_THREADS.remove(Thread.currentThread().getId());
+        EVENT_LOOP_THREADS.remove(Thread.currentThread().threadId());
     }
 
     /**
@@ -47,7 +47,7 @@ public final class LoopGuard {
     }
 
     private static boolean isEventLoopThread() {
-        return EVENT_LOOP_THREADS.contains(Thread.currentThread().getId());
+        return EVENT_LOOP_THREADS.contains(Thread.currentThread().threadId());
     }
 
     private static String getCallerInfo() {
